@@ -1,10 +1,11 @@
 import json
 
-# Исходный JSON
-data = open(input('Введите путь до JSON файла: ')).read()
+# Укажите точный путь к JSON-файлу
+file_path = r'C:\Users\andre\MsgToSqlAi\data\traindata.json'
 
 # Загружаем данные из JSON
-json_data = json.loads(data)
+with open(file_path, "r", encoding="utf-8") as f:
+    json_data = json.load(f)
 
 # Конвертируем данные в необходимый формат
 converted_data = []
