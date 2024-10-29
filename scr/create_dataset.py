@@ -25,7 +25,7 @@ def convert_to_spacy_format(data, nlp):
 # Чтение данных на конвертацию из файла
 data = [
     eval(line.strip().rstrip(","))
-    for line in open("..\\data\\training_data.txt", encoding="utf-8")
+    for line in open("C:/Users/andre/MsgToSqlAi/data/training_data.txt", encoding="utf-8")
 ]
 
 # Группируем данные по классам
@@ -65,10 +65,10 @@ random.shuffle(test_data)
 
 # Конвертируем данные в формат spacy и сохраняем
 train_doc_bin = convert_to_spacy_format(train_data, nlp)
-train_doc_bin.to_disk("../data/train.spacy")
+train_doc_bin.to_disk("train.spacy")
 
 dev_doc_bin = convert_to_spacy_format(dev_data, nlp)
-dev_doc_bin.to_disk("../data/dev.spacy")
+dev_doc_bin.to_disk("dev.spacy")
 
 test_doc_bin = convert_to_spacy_format(test_data, nlp)
-test_doc_bin.to_disk("../data/test.spacy")
+test_doc_bin.to_disk("test.spacy")
