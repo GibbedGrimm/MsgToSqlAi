@@ -1,7 +1,8 @@
+import os
 import json
 
-# Укажите точный путь к JSON-файлу
-file_path = r'C:\Users\andre\MsgToSqlAi\data\traindata.json'
+# Определяем путь к файлу относительно расположения скрипта
+file_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'traindata.json')
 
 # Загружаем данные из JSON
 with open(file_path, "r", encoding="utf-8") as f:
