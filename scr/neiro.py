@@ -1,12 +1,13 @@
 import spacy
 import re
 import openpyxl
+import os
 
 # Загрузите модель для русского языка, например, 'ru_core_news_sm'
-nlp_ru = spacy.load("./output/model-best")
+nlp_ru = spacy.load(os.path.join(os.path.dirname(__file__), '..', 'models', 'model-best'))
 
-f = open("for_model.txt", encoding="utf-8")
-output_xlsx_file = "output_data.xlsx"
+f = open(os.path.join(os.path.dirname(__file__), '..', 'forUse', 'for_model.txt'), encoding="utf-8")
+output_xlsx_file = os.path.join(os.path.dirname(__file__), '..', 'forUse', 'output_data.xlsx'), encoding="utf-8"
 
 
 # Функция для извлечения сущностей заданного типа из документа
