@@ -3,6 +3,7 @@ from spacy.tokens import DocBin
 from collections import defaultdict
 import math
 import random
+import os
 
 # Загружаем модель SpaCy
 nlp = spacy.blank("ru")
